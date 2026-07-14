@@ -7,5 +7,5 @@
 //   plugins: [
 //     tailwindcss(),
 //     react()
-//   ],
+//   ]
 // })
