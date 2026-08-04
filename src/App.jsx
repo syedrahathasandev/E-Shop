@@ -9,7 +9,7 @@ import CommonLayout from "./Components/CommonLayout";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<CommonLayout />} >
+        <Route path="/" element={<CommonLayout />} >
         <Route path="/home" element={<HomePage />} />
         <Route path="/product-list" element={< ProductListPage />} />
         <Route path="/product-details" element={<ProductDetailsPage />} />
