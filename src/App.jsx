@@ -5,15 +5,19 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/contactPage";
 import CheckOutPage from "./pages/CheckOutPage";
+import CommonLayout from "./Components/CommonLayout";
 function App() {
   return (
     <Routes>
-      <Route path="/home" element={<HomePage />} />
-      <Route path="/product-list" element={< ProductListPage />} />
-      <Route path="/product-details" element={<ProductDetailsPage />} />
-      <Route path="/blog" element={<BlogPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path="/checkout" element={<CheckOutPage />} />
+      <Route path="/" element={<CommonLayout />} >
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/product-list" element={< ProductListPage />} />
+        <Route path="/product-details" element={<ProductDetailsPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/checkout" element={<CheckOutPage />} />
+      </Route>
+
     </Routes>
   )
 }
