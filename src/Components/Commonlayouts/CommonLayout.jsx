@@ -5,11 +5,11 @@ import Container from './Container'
 const CommonLayout = () => {
     return (
         <>
-            <Container>
+            
                 <div className=''>Navbar</div>
                 <Outlet />
                 <div>Footer</div>
-            </Container>
+            
         </>
 
     )
