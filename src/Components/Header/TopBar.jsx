@@ -1,0 +1,9 @@
+import React from 'react'
+
+const TopBar = () => {
+  return (
+    <h1 className='borer'>TopBar</h1>
+  )
+}
+
+export default TopBar
