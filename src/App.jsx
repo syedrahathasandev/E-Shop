@@ -17,7 +17,6 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/checkout" element={<CheckOutPage />} />
       </Route>
-
     </Routes>
   )
 }
