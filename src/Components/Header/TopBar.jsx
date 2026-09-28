@@ -2,7 +2,7 @@ import React from 'react'
 
 const TopBar = () => {
   return (
-    <h1 className='borer'>TopBar</h1>
+    <div className='border-b border-[#BFBFBF] border-solid'>TopBar</div>
   )
 }
 
