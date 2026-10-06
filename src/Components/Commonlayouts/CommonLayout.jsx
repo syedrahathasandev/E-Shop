@@ -10,6 +10,8 @@ const CommonLayout = () => {
             <Outlet />
             <div>Footer</div>
         </>
+
     )
 }
+
 export default CommonLayout
