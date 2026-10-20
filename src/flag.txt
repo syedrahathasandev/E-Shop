@@ -1,0 +1,8 @@
+  const countries =[
+    {name: 'United States', code: 'US', flag:'https://flagcdn.com/16x12/us.png'},
+    {name: 'Canada', code: 'CA', flag:'https://flagcdn.com/16x12/ca.png'},
+    {name: 'United Kingdom', code: 'GB', flag:'https://flagcdn.com/16x12/gb.png'},
+    {name: 'Australia', code: 'AU', flag:'https://flagcdn.com/16x12/au.png'},
+    {name: 'Germany', code: 'DE', flag:'https://flagcdn.com/16x12/de.png'},
+    {name: 'France', code: 'FR', flag:'https://flagcdn.com/16x12/fr.png'},
+  ]
