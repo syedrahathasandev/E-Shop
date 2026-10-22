@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { FaAngleDown } from "react-icons/fa";
+
 
 const TopRightBar = () => {
 
@@ -14,7 +16,10 @@ const TopRightBar = () => {
     { name: 'France', value: 'FR', flag: 'https://flagcdn.com/16x12/fr.png' },
   ]
 
-
+   const handleSelect = (country) => {
+        setSelectedCountry(country)
+        setIsOpen(false)
+   }
 
   return (
     <div>
@@ -24,7 +29,7 @@ const TopRightBar = () => {
           {/* <img src='https://flagcdn.com/16x12/us.png'/> */}
           <select
             name="country"
-            className='w-[112px] hidden'
+            className='w-[150px] hidden'
             value={selectedCountry?.value || ''}
             onChange={(e) => {
               const country = countries.find((c) => c.value === e.target.value)
@@ -39,25 +44,44 @@ const TopRightBar = () => {
           </select>
 
           {/* coustom dropdown */}
-          <div className='border border-red-500 p-2 bg-green-500 coursor-pointer flex items-center'>
-            {selectedCountry ? 
-            
-            <>
-            <img src={selectedCountry?.flag} alt={selectedCountry?.name} className='w-5 h-4 mr-2'/>
-              <span>{selectedCountry?.name}</span>
-            </>
+          <div 
+          className='w-[150px] border  p-2  coursor-pointer flex items-center'
+          onClick={() => setIsOpen(!isOpen)}
+          >
+            {selectedCountry ?
 
-            : 
-            <span>Select a Country</span>
+              <>
+                <img src={selectedCountry?.flag} alt={selectedCountry?.name} className='w-5 h-4 mr-2' />
+                <span>{selectedCountry?.value}</span>
+                <FaAngleDown />
+
+              </>
+
+              :
+              <span>Select a Country<FaAngleDown />
+</span>
             }
           </div>
 
-            {/* Option List */}
-              {isOpen && (
-                <ul>
-                  {countries.map{(country, index) =>()}}
-                </ul>
-              )}
+          {/* Option List */}
+          {isOpen && (
+            <ul className='absolute w-full border border-gray-300 bg-white shadow-lg z-10'>
+              {countries.map((country, index) => (
+
+                <li 
+                key={country.value}
+                className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'
+                onClick={()=> handleSelect(country)}
+                
+                >
+
+                  <img src={country?.flag} alt={country?.name} className='w-5 h-4 mr-2' />
+                  {country.value}
+
+                </li>
+              ))}
+            </ul>
+          )}
 
         </div>
         <div className='relative after:content-[""] after:absolute after:w-[1px] after:h-[32px] after:bg-[#BFBFBF] after:left-[-25%] after:top-[50%] after:-translate-y-1/2 '>Social Media</div>
