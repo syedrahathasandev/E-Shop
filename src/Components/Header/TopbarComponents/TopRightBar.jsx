@@ -26,20 +26,19 @@ const TopRightBar = () => {
               name="country" 
               className='w-[112px] hidden'
               value={selectedCountry?.value || ''}
-              onChange={(e)=>{
-                  const  country = countries.find((c)=> c.value === e.target.value)
-                  setSelectedCountry(country)
-              }}  
-              >
-                {countries.map((country, index) =>(
-                  <option value={country.value}>{country.name}</option>
+              // onChange={(e)=>{
+              //     const  country = countries.find((c)=> c.value === e.target.value)
+              //     setSelectedCountry(country)
+              // }}  
+              // >
+              //   {countries.map((country, index) =>(
+              //     <option value={country.value}>{country.name}</option>
                   
 
-                ))}
+              //   ))}
               </select>
 
                 {/* coustom dropdown */}
-
         </div>
         <div className='relative after:content-[""] after:absolute after:w-[1px] after:h-[32px] after:bg-[#BFBFBF] after:left-[-25%] after:top-[50%] after:-translate-y-1/2 '>Social Media</div>
       </div>
